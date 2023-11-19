@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+
+
+    input {
+        @apply w-full text-right py-4 px-5 text-2xl bg-transparent text-black
+    }
+
+    .buttons {
+        @apply grid grid-cols-4 gap-4 mt-4  w-auto
+
+    }
+    .container {
+        @apply bg-blue-200 w-80 m-auto mt-20 my-auto p-4 rounded-lg shadow-lg
+    }
+    button{
+        @apply transition duration-300 active:translate-x-1 text-xl h-10
+    }
+    .numbers {
+        @apply bg-gray-100 rounded-lg shadow-lg
+    }
+    .operators {
+        @apply bg-black rounded-lg shadow-lg text-white
+           
+    }
+
+
+}
+@keyframes word {
+    0% {
+        transform: translateY(100%);
+    }
+
+    15% {
+        transform: translateY(-10%);
+        animation-timing-function: ease-out;
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    40%,
+    100% {
+        transform: translateY(-110%);
+    }
+}
+
+.animate-word {
+    animation: word 7s infinite;
+}
+
+.animate-word-delay-1 {
+    animation: word 7s infinite;
+    animation-delay: -1.4s;
+}
+
+.animate-word-delay-2 {
+    animation: word 7s infinite;
+    animation-delay: -2.8s;
+}
+
